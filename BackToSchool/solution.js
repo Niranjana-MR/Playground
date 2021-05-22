@@ -5,20 +5,23 @@ var inputData = "";
 
 process.stdin.on("data", function(input){
     inputData= input.split(' ');
+    
 });
 
 process.stdin.on("end", function(){
     calcMax(inputData);
 });
 
-function calcMax(num){ //3659 3152 914
-    if(num[0]>num[1] && num[0]>num[2]){
+function calcMax(num){ 
+    if(Number(num[0])>Number(num[1]) && Number(num[0])>Number(num[2])){
         process.stdout.write(num[0]);
     }
-    else if(num[1]>num[0] && num[1]>num[2]){
+    
+    if(Number(num[1])>Number(num[0]) && Number(num[1])>Number(num[2])){
         process.stdout.write(num[1]);
     }
-    else{
+
+    if(Number(num[2])>Number(num[0]) && Number(num[2])>Number(num[1])){
         process.stdout.write(num[2]);
     }
 }
