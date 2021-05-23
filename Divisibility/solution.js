@@ -1,5 +1,5 @@
 process.stdin.resume();
-process.stdin.setEncoding();
+process.stdin.setEncoding('utf-8');
 
 var arr = "";
 var sizeOfArray;
