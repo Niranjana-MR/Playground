@@ -1,0 +1,23 @@
+function narcissistic(value) {
+    //convert value to string type
+    //number of digits = str.length;
+    //perform a split of strNumber
+    //travel the array using a loop
+    //poweredValue = for each Number(value), power of exponent
+    //sum = 0, sum += poweredValue;
+    //sum === value;
+    
+    let strNumber = value.toString();
+    let exponent = strNumber.length;
+    
+    let arrayValue = strNumber.split('');
+    let poweredValue, sum = 0;
+    for(let i = 0; i<exponent; i++){
+      poweredValue = Number(arrayValue[i])**exponent;
+      sum += poweredValue;
+    }
+    if(sum === value){
+      return true;
+    }
+    return false;
+  }
