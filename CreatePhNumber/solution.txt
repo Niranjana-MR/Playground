@@ -1,0 +1,19 @@
+function createPhoneNumber(numbers){
+  //array of 10 integers is out input
+  //travel through the array
+  //add (
+  //add first three integers in the resulting string
+  //) ' '
+  //travel through the array, add next three integers and then a -
+  //add the rest
+  
+  //splice method.
+  
+  let phNumber = '(';
+  phNumber += numbers.splice(0,3).join('');
+  phNumber += ') ';
+  phNumber += numbers.splice(0,3).join('');
+  phNumber += '-';
+  phNumber += numbers.splice(0).join('');
+  return phNumber;  
+}
