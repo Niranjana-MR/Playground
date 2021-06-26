@@ -1,0 +1,19 @@
+function alphabetPosition(text) {
+    //convert text to lowercase
+    //go through the string
+    //res = replace that character by the position of the char in alphabets
+    //if char isn't a-z then we ignore it
+    // return res
+    //ascii values of the characters
+    text = text.toLowerCase();
+    let pattern = /[a-z]?/g;
+    text = text.match(pattern).join('');
+    console.log(text);
+    let res = [];
+    let position = 0;
+    for (let i = 0; i < text.length; i++) {
+        position = Number(text.charCodeAt(i)) - 96;
+        res[i] = position;
+    }
+    return (res.join(' '));
+}
